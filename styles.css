@@ -1,0 +1,87 @@
+/* General Styles */
+html {
+  margin: 0 35px;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.flexbox > diva, 
+.flexbox > divb {
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.product-card-large {
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 180px;
+}
+
+.product-card-large img {
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card-large .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Adjustments for screens under 400px */
+@media (max-width: 400px) {
+  /* Add spacing below header to avoid overlap with image */
+  header.bg-white {
+      padding-bottom: 20px; /* Adjust as needed for sufficient space */
+  }
+
+  /* Stack navigation vertically */
+  .flex.h-16 {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 15px; /* Creates space above navigation */
+  }
+
+  /* Hide the main nav links and show the mobile menu */
+  nav[aria-label="Global"] {
+      display: none;
+  }
+
+  /* Show mobile menu button */
+  .block.md:hidden {
+      display: block;
+      margin-top: 5px;
+  }
+
+  /* Flex navigation links to center and stack */
+  .md\:flex.md\:items-center.md\:gap-12 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+  }
+
+  /* Reduce padding and margins for compact look */
+  .mx-auto.max-w-screen-xl.px-4 {
+      padding: 0 10px;
+  }
+
+  .sm\:gap-4 {
+      gap: 2px;
+  }
+
+  .rounded-md.bg-teal-600.px-5.py-2.5 {
+      padding: 4px 8px;
+  }
+}
